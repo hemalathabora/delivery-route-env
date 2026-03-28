@@ -9,7 +9,9 @@ env = None
 
 class Action(BaseModel):
     target: int
-
+@app.get("/")
+def home():
+    return {"message": "Delivery Route Optimizer API is running"}
 @app.post("/reset")
 def reset():
     global env
