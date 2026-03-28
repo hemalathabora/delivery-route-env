@@ -1,12 +1,10 @@
 name: delivery-route-env
 
-description: Delivery Route Optimization Environment for AI agents
+version: "1.0"
 
-version: 1.0
+description: Delivery Route Optimization Environment
 
-entrypoint:
-  module: env.environment
-  class: DeliveryEnv
+entrypoint: env.environment:DeliveryEnv
 
 api:
   reset: /reset
@@ -14,13 +12,8 @@ api:
   state: /state
 
 tasks:
-  - name: easy
-    generator: tasks.easy:get_task
-  - name: medium
-    generator: tasks.medium:get_task
-  - name: hard
-    generator: tasks.hard:get_task
+  - tasks.easy:get_task
+  - tasks.medium:get_task
+  - tasks.hard:get_task
 
-grader:
-  module: graders.grader
-  function: grade
+grader: graders.grader:grade
