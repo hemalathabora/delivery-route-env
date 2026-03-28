@@ -2,13 +2,16 @@
 name = "delivery-route-env"
 version = "1.0.0"
 description = "Delivery Route Optimization OpenEnv"
-authors = [
-    { name="Hemalatha" }
-]
+authors = [{ name="Hemalatha" }]
+
 dependencies = [
     "fastapi",
-    "uvicorn"
+    "uvicorn",
+    "openenv-core>=0.2.0"
 ]
+
+[project.scripts]
+start = "server.app:app"
 
 [build-system]
 requires = ["setuptools"]
