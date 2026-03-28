@@ -1,0 +1,15 @@
+[project]
+name = "delivery-route-env"
+version = "1.0.0"
+description = "Delivery Route Optimization OpenEnv"
+authors = [
+    { name="Hemalatha" }
+]
+dependencies = [
+    "fastapi",
+    "uvicorn"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
