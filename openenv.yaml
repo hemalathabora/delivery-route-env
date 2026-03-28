@@ -1,0 +1,10 @@
+name: delivery-route-env
+
+entrypoint: env.environment:DeliveryEnv
+
+tasks:
+  - tasks.easy:get_task
+  - tasks.medium:get_task
+  - tasks.hard:get_task
+
+grader: graders.grader:grade
